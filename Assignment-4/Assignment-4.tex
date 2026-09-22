@@ -1,0 +1,1001 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Experiment No.
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+04
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Experiment Title
+\end{quote}
+\end{minipage} & Binary Classification using Linear and Kernel-Based Models \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+GitHub Repository:
+\end{quote}
+\end{minipage} & \url{https://github.com/The-FOOL-00/ML_Lab} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Student Name
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+R. Sundareswaran
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Register Number
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3122247001048
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Faculty
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dr. Poreddy Ajay Kumar Reddy
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Submission Date
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+August 11, 2026
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{1}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Objective}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+To classify emails as spam or ham using Logistic Regression and Support
+Vector Machine (SVM) classifiers and to analyze the effect of
+hyperparameter tuning on classification performance.
+
+\textbf{2} \textbf{Problem Statement}
+
+For the \textbf{Spambase} dataset that contains numerical features
+extracted from email con-tent and a binary label indicating \textbf{Spam
+or non-spam (ham)}. Implement Logistic Regression and reduce overfitting
+by \textbf{Regularization}. Tune with Grid Search CV and
+RandomizedSearchCV.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{3}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Dataset Description}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Dataset Name
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Spambase
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dataset Source
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\url{https://www.kaggle.com/datasets/somesh24/spambase}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Samples
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+4601
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Features
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+58
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Classes
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+2
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Missing Values
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train-Test Split
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train: 3680 and Test: 921
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+1
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{4}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Exploratory Data Analysis}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Class Distribution}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.13056in]{media/image1.png}
+
+Figure 1: Class Distribution of Emails
+
+\begin{quote}
+\textbf{Inference:}\\
+The class distribution plot shows that the dataset contains more ham
+emails than spam emails. Approximately 60.6\% of the samples belong to
+the ham class, while 39.4\% belong to the spam class. Although the
+dataset is not perfectly balanced, the class imbalance is moderate and
+suitable for training classification models without extensive
+resampling.
+\end{quote}
+
+2
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Correlation Matrix}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.13333in]{media/image2.png}
+
+Figure 2: Correlation Matrix of Features
+
+\begin{quote}
+\textbf{Inference:}\\
+The correlation matrix illustrates the relationships among the numerical
+features in the Spambase dataset. Most features exhibit weak to moderate
+correlations, while a few groups of features show stronger positive
+correlations. This indicates that the dataset contains diverse
+information with limited redundancy, making it suitable for spam
+clas-sification.
+
+\textbf{5} \textbf{Data Preprocessing}
+
+• \textbf{Missing Value Handling:}\\
+The Spambase dataset contains no missing values; therefore, no
+imputation or removal of records was required.
+
+• \textbf{Encoding:}\\
+The target variable is already represented as binary labels (Spam/Ham),
+so no additional encoding was necessary.
+
+• \textbf{Feature Scaling:}\\
+All numerical features were standardized using StandardScaler. Feature
+scaling improves the convergence of Logistic Regression and is essential
+for Support Vector Machine since it is distance-based.
+
+• \textbf{Train-Test Split:}\\
+The dataset was divided into training and testing sets using an 80:20
+ratio, resulting in 3680 training samples and 921 testing samples.
+
+• \textbf{Feature Engineering:}\\
+No additional feature engineering techniques were applied since the
+dataset already contains extracted numerical features.
+\end{quote}
+
+3
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{6}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Machine Learning Algorithm}
+\end{quote}
+\end{minipage}} \\
+\textbf{6.1} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Working Principle}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• \textbf{Logistic Regression:}\\
+Logistic Regression is a probabilistic classification algorithm used for
+binary classi-fication problems. It models the probability that a sample
+belongs to a particular class using the \textbf{sigmoid function}.
+
+• \textbf{Support Vector Machine (SVM)} Support Vector Machine is a
+margin-based classifier that finds an optimal hyperplane seperating two
+classes by maximizing the margin between them. \textbf{Key Idea:} Only a
+subset of training points (Support vectors) define the decision
+boundary.
+
+\textbf{Mathematical Formulation}
+
+\[P(y = 1|x) = \frac{1}{1 + e^{-(w^T x + b)}}\]
+
+A threshold (usually 0.5) is applied to convert probability into class
+labels.
+
+\textbf{Loss Function}: Logistic Regression minimizes the
+\textbf{log-loss (cross-entropy loss)}, which penalizes incorrect
+predictions.
+
+\textbf{6.2} \textbf{Advantages}
+
+• Fast and Simple.
+
+• Works well with linearly seperable data.
+
+• \textbf{Less prone to overfitting:} with L1/L2 Regularization.
+
+• Produces probability estimates for binary classification.
+
+\textbf{6.3} \textbf{Limitations}
+
+• Assumes Linear Decision boundary.
+
+• Sensitive to outliers.
+
+• Sensitive to multicollinearity.
+
+• Poor performance if classes are not linearly seperable.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{7}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Experimental Setup}
+\end{quote}
+\end{minipage}} \\
+\midrule()
+\endhead
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Python Version\\
+Scikit-Learn Version IDE\\
+Operating System\\
+Hardware
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3.13.13\\
+1.7.5\\
+Jupyter Notebook\\
+Fedora 42\\
+Intel Core i5 (11th gen), 8GB RAM
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+4
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{8}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Hyperparameter Selection}
+\end{quote}
+\end{minipage}} \\
+\textbf{8.1} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{GridSearchCV for LogisticRegression}
+\end{quote}
+\end{minipage}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+Parameter} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Value
+\end{quote}
+\end{minipage} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+C\\
+solver
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+10\\
+liblinear
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{GridSearchCV for SVM}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2500} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Value
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule()
+\endhead
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2500} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+C\\
+gamma\\
+kernel\\
+degree
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1\\
+scale\\
+RBF\\
+2
+\end{quote}\strut
+\end{minipage} & & & & & \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{9}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2500} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Results}
+\end{quote}
+\end{minipage}} & & & & & \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3750} + 4\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Model
+\end{quote}
+\end{minipage}} & Accuracy & Precision & Recall & F1-Score & ROC-AUC \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3750} + 4\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+LogisticRegression\\
+Support Vector Machine
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9196\\
+0.925
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9316\\
+0.934
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+0.8743\\
+0.8846
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+09021\\
+0.9090
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.97\\
+1.00
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+Table 2: Comparing performance of LogisticRegression and SVM .
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Kernel
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+accuracy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+F1
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Linear\\
+Poly\\
+RBF\\
+Sigmoid
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.925\\
+0.764\\
+0.934\\
+0.889
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+0.9090\\
+0.629\\
+0.9206\\
+0.8664\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+Table 3: Comparing the performance of various kernels of SVC
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Model
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Train accuracy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Test accuracy
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Logistic regression\\
+SVM
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9277\\
+0.945
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9196\\
+0.9348
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+Table 4: Comparing Test and train accuracies of both classification
+models.
+
+5
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Machine Learning Algorithms Laboratory
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{10}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Result Visualization}
+\end{quote}
+\end{minipage} & \multirow{2}{*}{} \\
+\textbf{10.1} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Logistic Regression}
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.28194in]{media/image3.png}
+
+Figure 3: Confusion Matrix
+
+6
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.27222in]{media/image4.png}
+
+Figure 4: Confusion Matrix Tuned with GridSearchCV.
+
+7
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.85833in]{media/image5.png}
+
+Figure 5: ROC curve
+
+8
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.85833in]{media/image6.png}
+
+Figure 6: ROC curve Tuned with GridSearchCV.
+
+9
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+ICS1512
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{10.2}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{SVM}
+\end{quote}
+\end{minipage} & \\
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.27222in]{media/image7.png}
+
+Figure 7: Confusion Matrix
+
+10
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.27222in]{media/image8.png}
+
+Figure 8: Confusion Matrix Tuned with GridSearchCV.
+
+11
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.85833in]{media/image9.png}
+
+Figure 9: ROC curve
+
+12
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\includegraphics[width=5.01389in,height=4.85833in]{media/image10.png}
+
+Figure 10: ROC curve tuned with gridSearchCV.
+
+\begin{quote}
+\textbf{11 Discussion}
+
+Since I have trained, GridSearchCV for LogRegression with max\_iter=10000
+it takes nearly 1min 10secs to finish. Also GridSearchCV for SVM
+with max\_iter=5000 that takes 2mins roughly to finish. So these time
+complexities are the limitations of my implementation.
+
+\textbf{12 Conclusion}
+
+From this experiment, I have learnt to implement Logistic Regression and
+Support Vector Classification for a given dataset having binary class
+target. Also tuned them using GridSearchCV, plotted Confusion matrix and
+ROC curve for all 4 models. Compared Performance metrics for all 4
+kernels of SVM.
+
+\textbf{13 References}
+
+1. Scikit-learn Developers, ``Scikit-learn: Machine Learning in Python.''
+Available: \url{https://scikit-learn.org/stable/}
+\end{quote}
+
+13
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+2. Kaggle, ``Spambase Dataset.'' Available:
+\url{https://www.kaggle.com/datasets/somesh24/spambase}
+
+3. T. Hastie, R. Tibshirani and J. Friedman, \emph{The Elements of
+Statistical Learning}, 2nd ed., Springer, 2009.
+
+4. C. M. Bishop, \emph{Pattern Recognition and Machine Learning},
+Springer, 2006.
+
+5. A. Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras
+and TensorFlow}, 3rd ed., O'Reilly, 2022.
+\end{quote}
+
+14
+
+\end{document}
