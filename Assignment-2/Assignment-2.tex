@@ -1,0 +1,789 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Experiment No.
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+02
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Experiment Title
+\end{quote}
+\end{minipage} & Email Spam/Ham Classification using Naive Bayes and KNN \\
+\textbf{GitHub Repository:} & \url{https://github.com/The-FOOL-00/ML_Lab} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Student Name
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+R. Sundareswaran
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Register Number
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3122247001048
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Faculty
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dr. Poreddy Ajaykumar Reddy
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Submission Date
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+August 11, 2026
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{1}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Objective}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• Build Spam classifier using Naive Bayes and KNN.
+
+• Compare Gaussian, Multinomial and Bernoulli Naive Bayes.• Study the
+effect of varying k.
+
+• Compare KDTree and BallTree.
+
+• Optimize KNN using GridSearchCV and RandomizedSearchCV.• Evaluate
+computational complexity and execution time.
+
+• Evaluate using K-Fold Validation.
+
+\textbf{2} \textbf{Problem Statement}\\
+The objective of this experiment is to develop an Email Spam/Ham
+Classification model using supervised machine learning algorithms. The
+experiment compares the performance of three variants of Naive Bayes
+classifiers (Gaussian, Multinomial and Bernoulli) with the K-Nearest
+Neighbors (KNN) algorithm. Hyperparameter tuning is performed using
+GridSearchCV and RandomizedSearchCV to identify the optimal KNN
+configuration. The performance of KDTree and BallTree search algorithms
+is also analyzed along with computational complexity, execution time and
+K-Fold Cross Validation.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{3}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Dataset Description}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Dataset Name
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Spambase
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dataset Source
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\url{https://www.kaggle.com/datasets/somesh24/spambase}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Samples
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+4601
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Features
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+58
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Classes
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+2
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Missing Values
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train-Test Split
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train: 3680 and Test: 921
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+1
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{4}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Exploratory Data Analysis}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• Loaded the Spambase dataset and examined its dimensions and data
+types.• Generated descriptive statistics using the describe() function.
+
+• Verified that the dataset contains no missing values.
+
+• Visualized the distribution of spam and ham emails.
+
+• Analyzed correlations among numerical features using a heatmap.
+
+• Examined feature distributions using histograms and boxplots to
+identify data spread and potential outliers.
+
+\textbf{Class Distribution}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.13055in]{media/image1.png}
+
+Figure 1: Class Distribution of Emails
+
+\begin{quote}
+\textbf{Inference:}\\
+The class distribution plot shows that the dataset contains more ham
+emails than spam emails. Approximately 60.6\% of the samples belong to
+the ham class, while 39.4\% belong to the spam class. Although the
+dataset is not perfectly balanced, the class imbalance is moderate and
+suitable for training classification models without extensive
+resampling.
+\end{quote}
+
+2
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Correlation Matrix}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.13333in]{media/image2.png}
+
+Figure 2: Correlation Matrix of Features
+
+\begin{quote}
+\textbf{Inference:}\\
+The correlation matrix illustrates the relationships among the numerical
+features in the Spambase dataset. Most features exhibit weak to moderate
+correlations, while a few groups of features show stronger positive
+correlations. This indicates that the dataset contains diverse
+information with limited redundancy, making it suitable for spam
+clas-sification.
+
+\textbf{5} \textbf{Data Preprocessing}
+
+• \textbf{Missing Value Handling:}\\
+The Spambase dataset contains no missing values; therefore, no
+imputation or removal of records was required.
+
+• \textbf{Encoding:}\\
+The target variable is already represented as binary labels (Spam/Ham),
+so no additional encoding was necessary.
+
+• \textbf{Feature Scaling:}\\
+All numerical features were standardized using StandardScaler. Feature
+scaling is essential for KNN because it relies on distance calculations.
+
+• \textbf{Train-Test Split:}\\
+The dataset was divided into training and testing sets using an 80:20
+ratio, resulting in 3680 training samples and 921 testing samples.
+
+• \textbf{Feature Engineering:}\\
+No additional feature engineering techniques were applied since the
+dataset already contains extracted numerical features.
+\end{quote}
+
+3
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{6}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Machine Learning Algorithm}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• \textbf{Working Principle:}
+
+\textbf{-- Naive Bayes:} Naive Bayes is a probabilistic supervised
+learning algorithm based on Bayes' theorem. It assumes that all features
+are conditionally inde-pendent given the class label and predicts the
+class with the highest posterior probability.
+
+\textbf{-- K-Nearest Neighbors (KNN):} KNN is a non-parametric
+supervised learn-ing algorithm that classifies a sample based on the
+majority class among its \emph{k} nearest neighbors using a distance
+metric such as Euclidean or Manhattan distance.
+
+• \textbf{Mathematical Formulation:}
+
+Bayes' theorem is given by
+\end{quote}
+
+\[P(C|X) = \frac{P(X|C) \times P(C)}{P(X)}\]
+
+\begin{quote}
+where \emph{P}(\emph{C\textbar X}) is the posterior probability,
+\emph{P}(\emph{X\textbar C}) is the likelihood, \emph{P}(\emph{C}) is
+the prior probability and \emph{P}(\emph{X}) is the evidence.
+
+The Manhattan distance used in KNN is
+\end{quote}
+
+\[d(x, y) = \sum_{i=1}^{n} |x_i - y_i|\]
+
+\begin{quote}
+where \emph{x} and \emph{y} are two data points.
+\end{quote}
+
+\begin{quote}
+• \textbf{Advantages:}
+
+\textbf{--} Naive Bayes is simple, fast and works well for text
+classification.
+
+\textbf{--} KNN is easy to implement and can model non-linear decision
+boundaries.
+
+\textbf{--} Both algorithms are effective for binary classification
+problems such as spam detection.
+
+• \textbf{Limitations:}
+
+\textbf{--} Naive Bayes assumes feature independence, which may not
+always hold.
+
+\textbf{--} KNN has high prediction time because it computes distances
+to all training samples.
+
+\textbf{--} KNN is sensitive to the choice of \emph{k} and requires
+feature scaling.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{7}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Experimental Setup}
+\end{quote}
+\end{minipage}} \\
+\midrule()
+\endhead
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Python Version\\
+Scikit-Learn Version IDE\\
+Operating System\\
+Hardware
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3.13.13\\
+1.7.5\\
+Jupyter Notebook\\
+Fedora 42\\
+Intel Core i5 (11th gen), 8GB RAM
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+4
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2857} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.7143} + 8\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage}} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{8}
+\end{quote}
+\end{minipage} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.8571} + 10\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Hyperparameter Selection}
+\end{quote}
+\end{minipage}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2857} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Parameter
+\end{quote}
+\end{minipage}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.7143} + 8\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Value
+\end{quote}
+\end{minipage}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2857} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Neighbors (\emph{k}) Distance Metric\\
+Search Algorithm\\
+Weight Function\\
+Cross Validation
+\end{quote}\strut
+\end{minipage}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.7143} + 8\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+8\\
+Manhattan\\
+KDTree and BallTree (Compared)\\
+Distance\\
+5-Fold
+\end{quote}\strut
+\end{minipage}} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{9}
+\end{quote}
+\end{minipage} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.8571} + 10\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Results}
+\end{quote}
+\end{minipage}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2857} + 2\tabcolsep}}{%
+\multirow{2}{*}{Model}} &
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Accuracy
+\end{quote}
+\end{minipage}} & \multirow{2}{*}{Precision} & &
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+F1-Score
+\end{quote}
+\end{minipage}} &
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+ROC-AUC
+\end{quote}
+\end{minipage}} \\
+& & & & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Recall
+\end{quote}
+\end{minipage} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2857} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Gaussian NB\\
+Multinomial NB\\
+Bernoulli NB\\
+Optimized KNN
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.8328\\ 0.8936\\ 0.8795\\ 0.9142
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.7146\\ 0.9431\\ 0.8684\\ 0.9356
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9587\\ 0.7769\\ 0.8182\\ 0.8402
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.8188\\ 0.8520\\ 0.8426\\ 0.8853
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.9229\\
+0.9625\\
+0.9457\\
+0.9563
+\end{quote}\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+Table 2: Performance Comparison of Classification Models
+
+\begin{quote}
+\textbf{10 Result Visualization}
+
+\textbf{Confusion matrix optimized KNN}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=4.00278in]{media/image3.png}
+
+Figure 3: Confusion Matrix of Optimized KNN
+
+5
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Inference:} The confusion matrix indicates that the optimized
+KNN classifier correctly classified most spam and ham emails with only a
+small number of misclassifications. The high number of true positives
+and true negatives demonstrates the effectiveness of the classifier. The
+low false positive and false negative counts indicate reliable
+prediction performance.
+
+\textbf{ROC Curve}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.47222in]{media/image4.png}
+
+Figure 4: ROC Curve of the Optimized KNN Classifier
+
+\begin{quote}
+\textbf{Inference:}\\
+The ROC curve illustrates the trade-off between the True Positive Rate
+(TPR) and False Positive Rate (FPR) at different classification
+thresholds. The curve lies close to the upper-left corner, indicating
+that the classifier effectively distinguishes spam emails from ham
+emails. A high Area Under the Curve (AUC) value demonstrates excellent
+classification performance and confirms the robustness of the optimized
+KNN model.
+
+\textbf{11 Discussion}
+
+The experiment compared three Naive Bayes variants with the KNN
+algorithm for email spam classification. Among the Naive Bayes
+classifiers, Multinomial Naive Bayes achieved the highest accuracy.
+Hyperparameter tuning using GridSearchCV further improved the
+performance of KNN, resulting in the highest overall accuracy. The
+comparison between KDTree and BallTree showed similar classification
+accuracy with differences only in execution time. K-Fold Cross
+Validation confirmed that the models produced consistent performance
+across different data splits.
+\end{quote}
+
+6
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Machine Learning Algorithms Laboratory
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{12}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Conclusion}
+\end{quote}
+\end{minipage} & \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+The experiment successfully implemented Email Spam/Ham classification
+using Naive Bayes and KNN algorithms. Among the Naive Bayes variants,
+Multinomial Naive Bayes achieved the best performance. Hyperparameter
+optimization further improved KNN, making it the best-performing model
+with an accuracy of approximately 91.42\%. The study demonstrated the
+effectiveness of hyperparameter tuning and cross-validation in improving
+model performance.
+
+\textbf{13 References}
+
+1. A. Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras \&
+TensorFlow}, 3rd ed., O'Reilly Media, 2022.
+
+2. T. Hastie, R. Tibshirani and J. Friedman, \emph{The Elements of
+Statistical Learning}. Springer, 2009.
+
+3. Scikit-Learn Documentation. Available: \url{https://scikit-learn.org}
+
+4. Kaggle Spambase Dataset. Available:
+\url{https://www.kaggle.com/datasets/somesh24/spambase}
+\end{quote}
+
+7
+
+\end{document}
