@@ -1,0 +1,1029 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Experiment No.
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+03
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Experiment Title
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Regression Analysis using Linear and Regularized Models
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{GitHub Repository:}
+\end{quote}
+\end{minipage} & \url{https://github.com/The-FOOL-00/ML_Lab} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Student Name
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+R. Sundareswaran
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Register Number
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3122247001048
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Faculty
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dr. Poreddy Ajay Kumar Reddy
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Submission Date
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+August 11, 2026
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{1}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Objective}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+To implement linear and regularized regression models for predicting a
+continuous target variable, evaluate their performance using multiple
+metrics, visualize model behavior, and analyze overfitting,
+underfitting, and bias--variance characteristics.
+
+\textbf{2} \textbf{Problem Statement}\\
+A real-world regression dataset containing numerical and categorical
+features related to loan appli- cations is used. The target variable is
+the loan amount sanctioned.
+
+• Implement, Linear, Ridge, Lasso, ElasticNet regression models.
+
+• Tune regularization hyperparameters using Grid Search or Randomized
+search.• Visualize regression results and errors.
+
+• Analyze overfitting, underfitting and bias-variance trade-off.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{3}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Dataset Description}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Dataset Name
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Loan Prediction
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Dataset Source
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\url{https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Samples
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+614
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Number of Features
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+12
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Missing Values
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+122
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train-Test Split
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Train-80\% Test-20\%
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+1
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{4}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Exploratory Data Analysis}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Statistical summary}
+\end{quote}
+
+\includegraphics[width=5.01389in,height=3.33056in]{media/image1.png}
+
+Figure 1: Histograms showing Statistical summary
+
+\begin{quote}
+\textbf{Inference:}\\
+This histogram shows, among the numerical columns credit History is only
+feature having 2 distinct values so it is a categorical column with
+number datatype. and LoanAmount target feature is distributed normally.
+\end{quote}
+
+2
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Correlation of the dataset features}
+\end{quote}
+
+\includegraphics[width=4.3875in,height=3.8125in]{media/image2.png}
+
+Figure 2: Correlation of features
+
+\begin{quote}
+\textbf{Inference:}\\
+See the correlation between ApplicantIncome and LoanAmount it is 0.57.
+So the heatmap tells LoanAmount is highly correlated by Applicant
+Income. As income increases Loan amount also increases (Directly
+proportional).
+
+\textbf{5} \textbf{Data Preprocessing}
+
+\textbf{5.1} \textbf{Missing Value Handling:}
+
+Missing values in numerical attributes were replaced using the median
+value, while missing values in categorical attributes were replaced
+using the most frequent category using the SimpleImputer class.
+
+\textbf{5.2} \textbf{Encoding:}
+
+Categorical variables such as Gender, Married, Education, Self\_Employed
+and Prop-erty\_Area were converted into numerical format using One-Hot
+Encoding to make them suitable for machine learning algorithms.
+
+\textbf{5.3} \textbf{Feature Scaling:}
+
+Numerical attributes were standardized using StandardScaler so that all
+features have zero mean and unit variance. This improves model stability
+during training.
+\end{quote}
+
+3
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Machine Learning Algorithms Laboratory
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{5.4}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Train-Test Split:}
+\end{quote}
+\end{minipage} & \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+The dataset was divided into training and testing sets using an 80:20
+ratio with a fixed random state for reproducibility.
+
+\textbf{5.5} \textbf{Feature Engineering:}\\
+No additional feature engineering techniques were applied. The original
+dataset features were directly used after preprocessing.
+
+\textbf{6} \textbf{Machine Learning Algorithm}\\
+\textbf{6.1} \textbf{Working Principle}\\
+Linear Regression is a supervised learning algorithm used to predict
+continuous numerical values. It models the relationship between the
+dependent variable and one or more independent variables by fitting the
+best straight line that minimizes prediction error.
+
+\textbf{6.2} \textbf{Mathematical Formulation}\\
+The prediction equation is
+\end{quote}
+
+\[y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n\]
+
+\begin{quote}
+where
+\end{quote}
+
+\begin{quote}
+• $y$ is the predicted output,\\
+• $\beta_0$ is the intercept,\\
+• $\beta_i$ are regression coefficients,\\
+• $x_i$ are input features.
+
+The model minimizes the Mean Squared Error (MSE)
+\end{quote}
+
+\[MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2\]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{6.3}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Advantages}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• Simple and easy to interpret.
+
+• Fast to train.
+
+• Works well when the relationship between variables is approximately
+linear.• Computationally efficient.
+\end{quote}
+
+4
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Machine Learning Algorithms Laboratory
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{6.4}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Limitations}
+\end{quote}
+\end{minipage} & \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+• Assumes a linear relationship.
+
+• Sensitive to outliers.
+
+• Cannot capture complex nonlinear relationships.
+
+• Performance decreases when assumptions are violated.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{7}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Experimental Setup}
+\end{quote}
+\end{minipage}} \\
+\midrule()
+\endhead
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Python Version\\
+Scikit-Learn Version IDE\\
+Operating System\\
+Hardware
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+3.13.13\\
+1.7.5\\
+Jupyter Notebook\\
+Fedora Linux 42\\
+Intel core i5 (11th gen) 8GB RAM
+\end{quote}\strut
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{8}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Hyperparameter Selection}
+\end{quote}
+\end{minipage}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Parameter
+\end{quote}
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Value
+\end{quote}
+\end{minipage} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Search Method\\
+Cross-validation\\
+Ridge alpha\\
+Lasso Alpha\\
+ElasticNet alpha\\
+ElasticNet L1 Ratio
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+GridSearchCV\\
+5-fold\\
+100\\
+10\\
+1\\
+0.5
+\end{quote}\strut
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{9}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Results}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Linear Regression}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Metric
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Mean Absolute Error\\
+Mean Squared Error\\
+Root Mean squared Error\\
+R2 score
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+36.988\\
+3339.922\\
+57.792\\
+0.094\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Ridge regression}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Metric
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Mean Absolute Error\\
+Mean Squared Error\\
+Root Mean Squared Error\\
+R2 score
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+36.971\\
+3334.977\\
+57.749\\
+0.095\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+5
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Lasso regression}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Metric
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Mean Absolute Error\\
+Mean Squared Error\\
+Root Mean Squared Error\\
+R2 score
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+35.841\\
+3232.042\\
+56.851\\
+0.123\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{ElasticNet regression}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Metric
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Mean Absolute Error\\
+Mean Squared Error\\
+Root Mean Squared Error\\
+R2 score
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+37.826\\
+3048.685\\
+55.215\\
+0.173\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Inference:}\\
+Among 4 regression models, Lasso Regression model has the lowest MAE and
+ElasticNet regression has the lowest RMSE.
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{9.1}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Best Model}
+\end{quote}
+\end{minipage}} \\
+\midrule()
+\endhead
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Model
+\end{quote}
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Best CV \emph{R}2
+\end{quote}
+\end{minipage} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Linear Regression\\
+Lasso\\
+ElasticNet\\
+Ridge
+\end{quote}\strut
+\end{minipage}} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.1840\\
+0.2544\\
+0.3384\\
+0.3407
+\end{quote}\strut
+\end{minipage} \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Since Ridge regression has highest Best CV it performs best on this
+dataset.
+\end{quote}
+\end{minipage}} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{9.2}
+\end{quote}
+\end{minipage} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Bias Variance Trade-off}
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+We know that, a model is said to be \textbf{Overfitting} if it has
+\textbf{Low Bias and High variance} or Good Train accuracy and bad test
+accuracy else if model has both low train and test accuracies or
+\textbf{High bias and Low variance} it is called as \textbf{Underfitting
+Model}.
+
+From the output:
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Model
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Train score
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Test Score
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Outcome
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Linear Regression\\
+Lasso\\
+ElasticNet\\
+Ridge
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.4567\\
+0.45123\\
+0.3928\\
+0.4567
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.0939\\
+0.1232\\
+0.1729\\
+0.0953
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Underfitting\\
+Underfitting\\
+Underfitting\\
+Underfitting
+\end{quote}\strut
+\end{minipage} \\
+\multicolumn{4}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{1.0000} + 6\tabcolsep}@{}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Inference:} The training and testing scores of all four
+regression models are relatively low, indicating that the models are
+unable to capture the underlying relationship between the input features
+and the target variable effectively. Although there is a difference
+between the training and testing scores, the training performance is not
+sufficiently high to classify the models as overfitting. Hence, the
+models exhibit underfitting (high bias). Among the evaluated models,
+ElasticNet achieved the highest testing score, while Ridge Regression
+obtained the best cross-validation performance after hyperparameter
+tuning.
+\end{quote}
+\end{minipage}} \\
+\bottomrule()
+\end{longtable}
+
+6
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Machine Learning Algorithms Laboratory
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{10}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Result Visualization}
+\end{quote}
+\end{minipage} & \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Actual vs Predicted results}
+\end{quote}
+
+\includegraphics[width=5.01389in,height=3.89167in]{media/image3.png}
+
+Figure 3: Actual VS Predicted value plot
+
+\begin{quote}
+\textbf{Inference:}\\
+x-axis as actual value (True value) and y-axis as Predicted value. The
+imaginary red line passing diagonally is the perfect prediction line
+which is used to compare our model.
+\end{quote}
+
+7
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Residual Plot}
+\end{quote}
+
+\includegraphics[width=5.01389in,height=3.75694in]{media/image4.png}
+
+\begin{quote}
+\textbf{Inference:} This is like normalized version of previous graph.
+where, x-axis is predicted y value. y-axis is the residual value i.e.
+difference between actual y and predicted y values. The horizontal red
+line the ''zero residual'' model.
+
+\textbf{11 Discussion}
+
+Trained all 4 variants of regression. But the limitation is before
+calculating performance metrics and plotting visualization plots it
+trains the model for all the 4 algorithms and predicts that is
+computationally expensive.
+
+\textbf{12 Conclusion}
+
+From this experiment, I have learnt to Train a model with
+LinearRegression, Lasso, Ridge and ElasticNet regression and computed
+their performance using metrics such as, MAE, MSE, RMSE, R2 score. Also
+performed Cross validation.
+
+\textbf{13 References}
+
+1. A. Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras \&
+TensorFlow}, 3rd ed., O'Reilly Media, 2022.
+
+2. T. Hastie, R. Tibshirani and J. Friedman, \emph{The Elements of
+Statistical Learning}. Springer, 2009.
+
+3. Scikit-Learn Documentation. Available:
+\url{https://scikit-learn.org}
+\end{quote}
+
+8
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+ICS1512
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Machine Learning Algorithms Laboratory
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+4. Kaggle Spambase Dataset. Available:
+\url{https://www.kaggle.com/datasets/somesh24/spambase}
+\end{quote}
+
+9
+
+\end{document}
